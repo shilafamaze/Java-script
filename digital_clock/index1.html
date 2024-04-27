@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock1   </title>
+    <link href="style1.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+      <div class="main">
+        <div class="container">
+            <div class="clock">
+                <span id="hours">00</span>
+                <span>:</span>
+                <span id="min">00</span>
+                <span>:</span>
+                <span id="sec">00</span>
+
+
+            </div>
+        </div>
+
+      </div>
+
+
+    <script>
+        // let hours = document.getElementById("hours").value;
+
+        // let min = document.getElementById("hours").value;
+        
+        // let sec = document.getElementById("hours").value;
+
+        // let date=new Date()
+        
+        // hours.innerHTML = (date.getHours())
+
+        function shoTme(){
+            setTimeout(()=>{
+               let date=new Date();
+               let hours=date.getHours();
+               let min=date.getMinutes();
+               let sec=date.getSeconds();
+               document.getElementById("hours").innerHTML=hours<10?"0"+hours%12:hours;
+               document.getElementById("min").innerHTML=min<10?"0"+min:min;
+               document.getElementById("sec").innerHTML=sec<10?"0"+sec:sec;
+
+
+                shoTme()
+            },1000)
+        }
+
+        shoTme()
+    </script>
+</body>
+</html>
