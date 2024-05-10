@@ -11,10 +11,13 @@ class Button {
     set Height(height){
         this.button.style.height=height+"px";
     }
+    set borderRadius(radius){
+        this.button.style.borderRadius=radius+"%";
+    }
 }
 
 var btn=new Button("click me")
 console.log(btn);
 btn.width=150
 btn.Height=150
-
+btn.borderRadius=100
